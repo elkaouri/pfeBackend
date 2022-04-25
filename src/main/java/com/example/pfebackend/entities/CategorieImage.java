@@ -15,6 +15,7 @@ public class CategorieImage  {
     private String libelle;
     private String Type;
     private float tarif;
+    private String path;
     @ManyToOne
     @JoinColumn(name = "fiche_presentation_id")
     private FichePrestation fichePrestation;
