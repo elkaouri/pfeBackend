@@ -5,6 +5,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
+import java.io.Serializable;
 import java.util.List;
 
 @Entity
@@ -12,10 +13,8 @@ import java.util.List;
 @NoArgsConstructor
 @AllArgsConstructor
 @PrimaryKeyJoinColumn(name = "medecin_id")
-public class Medecin extends Utilisateur {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+public class Medecin extends Utilisateur implements Serializable {
+
     @OneToMany(mappedBy = "medecin")
     private List<Rapport> rapports;
 
