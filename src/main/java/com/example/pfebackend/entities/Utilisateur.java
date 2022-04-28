@@ -7,6 +7,7 @@ import lombok.NoArgsConstructor;
 import javax.persistence.*;
 import java.io.Serializable;
 import java.util.Date;
+import java.util.List;
 
 @Entity
 @Data
@@ -29,5 +30,8 @@ public class Utilisateur   {
     @Column(name = "mot_de_passe")
     private String motDePasse;
 
+
+    @ManyToMany
+    private List<Role> roles;
 
 }

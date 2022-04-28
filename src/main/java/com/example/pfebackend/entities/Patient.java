@@ -25,4 +25,6 @@ public class Patient  implements Serializable {
     private List<FichePrestation> fichePrestations;
 
 
+
+
 }
